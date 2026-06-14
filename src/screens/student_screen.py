@@ -159,8 +159,7 @@ def student_screen():
             except Exception:
                 st.error("Audio Data Failed!")
 
-            # st.write("photo_source =", photo_source is not None)
-            # st.write("show_registration =", st.session_state.show_registration)    
+               
 
             if st.button("Create Account",type="primary"):
                 st.write("clicked")

@@ -38,17 +38,6 @@ def main():
 
 
 
-# basics:
 
-    # st.header("this is title")
-    # name=st.text_input("enter here")
-    # col1,col2=st.columns(2)
-    # with col1:
-    #     if st.button("submit",type="primary"):
-    #         print('hi',name)
-    # with col2:
-    #     st.button("submit",type="primary",key="btn2")
-
-    
 
 main()    
