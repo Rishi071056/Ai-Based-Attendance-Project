@@ -4,17 +4,24 @@ def style_background_home():
     st.markdown("""
         <style>
                 .stApp{
-                    background-color:#5865F2 !important;
+                    background-color:#0F172A !important;
                 
                   
                 }
-                [data-testid="column"]{
-                    background-color:#E0E3FF !important;
-                    padding:2.3rem !important;
-                    border-radius:5rem !important;
-                    min-height:300px !important;
+                .stApp div[data-testid="stColumn"]{
+                    background-color:#F8FAFC !important;
+                    padding:1rem !important;
+                    border-radius:2rem !important;
+                    min-height:180px !important;
+                    max-height:250px !important;
+                    margin:auto !important;
+                    box-shadow:0 8px 25px rgba(0,0,0,0.15) !important;
+                
                 }
-        <?style>        
+                .stApp div[data-testid="stColumn"] h2{
+                color:black !important;
+            }
+        </style>        
                       
           
 
@@ -26,10 +33,10 @@ def style_background_dashboard():
     st.markdown("""
         <style>
                 .stApp{
-                    background-color:#E0E3FF !important;
+                    background-color:linear-gradient(135deg,#5865F2,#7C3AED)!important;
                   
                 }
-        <?style>        
+        </style>        
                       
           
 
@@ -54,10 +61,10 @@ def style_base_layout():
 
                 h1{
                     font-family:'Climate Crisis',sans-serif !important;
-                    font-size:3.5rem !important;
+                    font-size:2.5rem !important;
                     line-height:1.1 !important;
                     margin-bottom:0rem !important;
-                    color:#EOE3FF !important;
+                    color:white !important;
                 }
 
 
@@ -66,17 +73,22 @@ def style_base_layout():
                     font-size:2rem !important;
                     line-height:0.9 !important;
                     margin-bottom:0rem !important;
-                    color:#EOE3FF !important;
+                    color:#F8FAFF !important;
                 }
 
-                h3,h4,p,{
+                .stApp div[data-testid="stColumn"] h3,
+                .stApp div[data-testid="stColumn"] p{
+                    color:#FFFFFF !important;
+                }
+
+                h3,h4,p{
                     font-family:'Outfit',sans-serif !important;
                     
 
                 }
 
                 button{
-                    background:#5865F2 !important;
+                    background-color:#5865F2 !important;
                     border-radius:1.5rem !important;
                     color:white !important;
                     padding: 10px 20px !important;
@@ -88,7 +100,7 @@ def style_base_layout():
                 }
 
                 button[kind="secondary"]{
-                    background:#EB459E !important;
+                    background-color:#EB459E !important;
                     border-radius:1.5rem !important;
                     color:white !important;
                     padding: 10px 20px !important;
@@ -100,7 +112,7 @@ def style_base_layout():
                 }
 
                 button[kind="tertiary"]{
-                    background:#000000 !important;
+                    background-color:#000000 !important;
                     border-radius:1.5rem !important;
                     color:white !important;
                     padding: 10px 20px !important;
@@ -118,7 +130,7 @@ def style_base_layout():
                     
                 
                 
-        <?style>        
+        </style>        
                     
         
 
@@ -128,18 +140,3 @@ def style_base_layout():
     
 
 
-def style_background_home():
-    st.markdown("""
-        <style>
-                .stApp{
-                    background:#5865F2 !important;
-                
-                }
-        <?style>        
-                    
-        
-
-
-
-                """,unsafe_allow_html=True)     
-    
