@@ -65,7 +65,7 @@ def teacher_tab_take_attendance():
         gallery_cols=st.columns(4)
 
         for idx,img in enumerate(st.session_state.attendance_images):
-            with gallery_cols(idx%4):
+            with gallery_cols[idx%4]:
                 st.image(img,width="stretch",caption=f'Photo {idx+1}')
     has_photos=bool(st.session_state.attendance_images)
     c1,c2,c3=st.columns(3)
