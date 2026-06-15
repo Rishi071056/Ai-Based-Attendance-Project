@@ -51,9 +51,9 @@ def style_base_layout():
                 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Climate+Crisis:YEAR@1979&display=swap');
                 @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400..800&family=Climate+Crisis:YEAR@1979&family=Outfit:wght@100..900&display=swap');
                 
-                #MainMenu,header,footer{
-                    visibility:hidden;
-                }
+                # #MainMenu,header,footer{
+                #     visibility:hidden;
+                # }
 
                 .block-container{
                     padding-top:1.5rem !important;

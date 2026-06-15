@@ -78,12 +78,13 @@ def teacher_tab_take_attendance():
     with c2:
         
         if st.button("Run Face Analysis",type="secondary",width="stretch",icon=":material/analytics:",disabled=not has_photos):
+            st.write("button pressed")
             with st.spinner("Deep scanning photos..."):
                 all_detected_id={}
 
                 for idx,img in enumerate(st.session_state.attendance_images):
                     img_np=np.array(img.convert('RGB'))
-                    detected, _,=predict_attendance(img_np)
+                    detected, _,_=predict_attendance(img_np)
 
                     if detected:
                         for sid in detected.keys():
