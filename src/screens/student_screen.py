@@ -7,7 +7,7 @@ import numpy as np
 from src.pipelines.face_pipeline import predict_attendance,get_face_embeddings,train_classifier
 from src.database.db import get_all_students,create_students,get_student_subjects,get_student_attendance,unenroll_student_to_subject
 from src.pipelines.voice_pipeline import get_voice_embeddings
-import cv2
+
 from src.components.dialog_enroll import enroll_dialog
 from src.components.subject_card import subject_card
 
@@ -117,7 +117,7 @@ def student_screen():
     photo_source=st.camera_input("Position your face in center")
     if photo_source:
         img=np.array(Image.open(photo_source))
-        img=cv2.resize(img,(0,0),fx=0.25,fy=0.25)
+        
         with st.spinner("AI Is Scanning.."):
             detected,all_ids,num_faces=predict_attendance(img)
 
