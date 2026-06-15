@@ -68,6 +68,7 @@ def train_classifier():
 
 def predict_attendance(class_image_np):
     encodings=get_face_embeddings(class_image_np)
+    
     detected_students={}
     model_data=get_trained_models()
 

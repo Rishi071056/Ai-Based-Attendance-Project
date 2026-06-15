@@ -15,7 +15,7 @@ def student_dashboard():
     student_data=st.session_state.student_data
     print(student_data)
     print(type(student_data))
-    student_id=student_data[0]['student_id']
+    student_id=student_data['student_id']
 
     c1,c2=st.columns(2,vertical_alignment="center", gap="xxlarge")
     with c1:
@@ -23,7 +23,7 @@ def student_dashboard():
 
 
     with c2:
-        st.subheader(f"""Welcome,{student_data[0]['name']}""")
+        st.subheader(f"""Welcome,{student_data['name']}""")
         if st.button("Logout", type="secondary", key="loginbackbtn" , shortcut="control+backspace"):
             st.session_state.clear() 
             # st.session_state['is_logged_in']=False
@@ -58,7 +58,7 @@ def student_dashboard():
 
         stats_map[sid]['total']+=1
 
-        if logs.get('is_present'):
+        if log.get('is_present'):
             stats_map[sid]['attended']+=1
 
     cols=st.columns(2)
@@ -68,7 +68,7 @@ def student_dashboard():
 
         stats=stats_map.get(sid,{"total":0,"attended":0})
         def unenroll_button():
-            if st.button("Unenroll",type="tertiary",width="stretch",icon=":material/delete_forever:"):
+            if st.button("Unenroll",type="tertiary",width="stretch",icon=":material/delete_forever:",key=f'unenroll_{sid}'):
                 unenroll_student_to_subject(student_id,sid)
                 st.toast(f'Unenrolled from {sub["name"]} Successfully!')
                 st.rerun()
