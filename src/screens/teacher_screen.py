@@ -104,6 +104,7 @@ def teacher_tab_take_attendance():
                     for node in enrolled_students:
                         student=node['students']
                         sources=all_detected_id.get(int(student['student_id']),[])
+                        st.write("sources=",sources)
                         is_present=len(sources)>0
 
                         results.append({
